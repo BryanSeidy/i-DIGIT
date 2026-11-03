@@ -4,7 +4,7 @@ Site institutionnel Next.js App Router, TypeScript et CSS personnalisé, configu
 
 ## Pages
 - `/` : accueil, six familles de services, présentation, approche et contact.
-- `/carte/` : carte professionnelle de **Chris Seidy — Fondateur · Consultant**, WhatsApp, téléphone, e-mail, vCard et formulaire de demande de rappel.
+- `/carte/` : carte professionnelle de **Chris Seidy — Fondateur · Consultant**, portrait, WhatsApp, téléphone, e-mail, vCard et formulaire de demande de rappel.
 - `/confidentialite/` : note d'information initiale sur les interactions du site.
 
 ## Identité
@@ -33,7 +33,6 @@ Build statique : `npm run build`, résultat dans `out/`.
 
 ## À finaliser avant publication
 - Vérifier le domaine et les DNS existants (notamment les enregistrements e-mail).
-- Remplacer le portrait de remplacement de la carte professionnelle par la photo finale du fondateur.
 - Confirmer les modalités de support annoncées et compléter les mentions légales/confidentialité.
 - Le formulaire prépare un message WhatsApp ; aucune donnée n'est enregistrée dans une base i-DIGIT.
 - Générer le QR code uniquement après déploiement de la page `/carte/` sur une URL publique stable.
