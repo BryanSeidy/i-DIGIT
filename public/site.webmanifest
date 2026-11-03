@@ -1,0 +1,10 @@
+{
+  "name":"i-DIGIT",
+  "short_name":"i-DIGIT",
+  "description":"Solutions numériques à Douala",
+  "start_url":"/",
+  "display":"standalone",
+  "background_color":"#F4F7FB",
+  "theme_color":"#222E3A",
+  "icons":[{"src":"/brand/idigit-symbol.svg","sizes":"any","type":"image/svg+xml"}]
+}
