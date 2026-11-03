@@ -15,7 +15,7 @@ export default function CartePage() {
       <div className="digital-card">
         <div className="digital-card-top"><img src="/brand/idigit-logo-horizontal.svg" alt="i-DIGIT — Solutions numériques"/><span>CARTE PROFESSIONNELLE</span></div>
         <div className="digital-card-person">
-          <img src="/images/chris-seidy.png" alt="Portrait professionnel de Chris Seidy" className="profile-photo"/>
+          <img src="/images/chris-seidy.svg" alt="Portrait de remplacement Chris Seidy" className="profile-photo"/>
           <div><span className="profile-overline">VOTRE INTERLOCUTEUR</span><h1>Chris Seidy</h1><p>Fondateur · Consultant</p><span className="profile-company">i-DIGIT · Solutions numériques</span></div>
         </div>
         <div className="digital-card-actions">
