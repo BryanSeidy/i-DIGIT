@@ -5,31 +5,49 @@ const whatsappBase = 'https://wa.me/237659754675?text='
 const services = [
   {
     number: '01', icon: 'wrench' as const, title: 'Maintenance & assistance informatique',
+    image: 'https://images.unsplash.com/photo-1705494833979-9377fbdee229?auto=format&fit=crop&w=1100&q=82',
+    imageAlt: 'Ordinateur portable ouvert pour une intervention de maintenance matérielle.',
+    visualCaption: 'Maintenance de vos équipements',
     description: 'Gardez vos équipements fiables et votre activité opérationnelle.',
     items: ['Diagnostic et dépannage', 'Maintenance préventive et corrective', 'Installation et assistance technique'],
   },
   {
     number: '02', icon: 'network' as const, title: 'Réseaux & sécurité électronique',
+    image: 'https://images.unsplash.com/photo-1695668548342-c0c1ad479aee?auto=format&fit=crop&w=1100&q=82',
+    imageAlt: 'Baies réseau et équipements informatiques dans une salle technique.',
+    visualCaption: 'Réseaux & infrastructure',
     description: 'Des infrastructures connectées, structurées et mieux protégées.',
     items: ['Installation réseaux LAN et Wi-Fi', 'Vidéosurveillance et caméras IP', 'Configuration et sécurisation réseau'],
   },
   {
     number: '03', icon: 'home' as const, title: 'Domotique & systèmes connectés',
+    image: 'https://images.unsplash.com/photo-1770625467638-964f594712e3?auto=format&fit=crop&w=1100&q=82',
+    imageAlt: 'Panneau mural de commande numérique et réglage de température.',
+    visualCaption: 'Des espaces intelligents',
     description: 'Rendez vos espaces plus intelligents, pratiques et maîtrisables.',
     items: ['Automatisation des éclairages', 'Capteurs et équipements connectés', 'Contrôle intelligent des installations'],
   },
   {
     number: '04', icon: 'code' as const, title: 'Digitalisation & développement logiciel',
+    image: 'https://images.unsplash.com/photo-1642177977596-36c73531208d?auto=format&fit=crop&w=1100&q=82',
+    imageAlt: 'Ordinateur portable affichant un service numérique dans un espace de travail.',
+    visualCaption: 'Vos outils métier, en numérique',
     description: 'Des outils numériques qui s’adaptent à vos méthodes de travail.',
     items: ['Sites web et applications métiers', 'Outils internes et tableaux de bord', 'Automatisation des processus'],
   },
   {
     number: '05', icon: 'spark' as const, title: 'Intelligence artificielle & automatisation',
+    image: 'https://images.unsplash.com/photo-1748609278627-4b0e483b9b70?auto=format&fit=crop&w=1100&q=82',
+    imageAlt: 'Poste de travail numérique avec écran et outils de suivi de données.',
+    visualCaption: 'Des processus mieux orchestrés',
     description: 'Faites gagner du temps à vos équipes avec des usages IA concrets.',
     items: ['Assistants conversationnels', 'Agents IA et intégrations API', 'Automatisation des tâches répétitives'],
   },
   {
     number: '06', icon: 'headset' as const, title: 'Externalisation informatique',
+    image: 'https://images.unsplash.com/photo-1758691737158-18ffa31c0a46?auto=format&fit=crop&w=1100&q=82',
+    imageAlt: 'Équipe réunie autour d’un ordinateur pour travailler ensemble.',
+    visualCaption: 'Un partenaire à vos côtés',
     description: 'Un accompagnement technique adapté aux besoins de votre structure.',
     items: ['Support informatique externalisé', 'Suivi et maintenance de parc', 'Accompagnement technique continu'],
   },
@@ -94,11 +112,21 @@ export default function HomePage() {
           <div className="services-grid">
             {services.map((service) => (
               <article className="service-card" key={service.number}>
-                <div className="service-card-top"><span className="service-icon"><Icon name={service.icon} size={27}/></span><span className="service-number">{service.number}</span></div>
-                <h3>{service.title}</h3>
-                <p>{service.description}</p>
-                <ul>{service.items.map(item => <li key={item}><Icon name="check" size={15}/>{item}</li>)}</ul>
-                <a href={wa(`Bonjour i-DIGIT, je souhaite en savoir plus sur votre service : ${service.title}.`)} target="_blank" rel="noreferrer" className="text-link">Parler de ce service <Icon name="arrow" size={16}/></a>
+                <div className="service-visual">
+                  <img src={service.image} alt={service.imageAlt} loading="lazy" decoding="async"/>
+                  <span className="service-visual-number">{service.number}</span>
+                  <span className="service-visual-caption">{service.visualCaption}</span>
+                </div>
+                <div className="service-card-body">
+                  <div className="service-card-top">
+                    <span className="service-icon"><Icon name={service.icon} size={21}/></span>
+                    <span className="service-card-kicker">EXPERTISE I-DIGIT</span>
+                  </div>
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
+                  <ul>{service.items.map(item => <li key={item}><Icon name="check" size={15}/>{item}</li>)}</ul>
+                  <a href={wa(`Bonjour i-DIGIT, je souhaite en savoir plus sur votre service : ${service.title}.`)} target="_blank" rel="noreferrer" className="text-link">Parler de ce service <Icon name="arrow" size={16}/></a>
+                </div>
               </article>
             ))}
           </div>
