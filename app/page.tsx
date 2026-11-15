@@ -2,9 +2,9 @@ import Link from 'next/link'
 import { Icon } from '../components/icon'
 
 const whatsappBase = 'https://wa.me/237659754675?text='
-const wa = (message: string) => \`\${whatsappBase}\${encodeURIComponent(message)}\`
+const wa = (message: string) => whatsappBase + encodeURIComponent(message)
 
-const projectMessage = 'Bonjour i-DIGIT, je souhaite étudier un projet de solution technologique.\\nDomaine : [énergie / sécurité / réseau / autre]\\nVille ou quartier : [à préciser]\\nMon besoin : [décrire brièvement].'
+const projectMessage = 'Bonjour i-DIGIT, je souhaite étudier un projet de solution technologique.\nDomaine : [énergie / sécurité / réseau / autre]\nVille ou quartier : [à préciser]\nMon besoin : [décrire brièvement].'
 
 const solutions = [
   {
@@ -131,7 +131,7 @@ export default function HomePage() {
                   <h3>{solution.title}</h3>
                   <p>{solution.description}</p>
                   <ul>{solution.items.map(item => <li key={item}><Icon name="check" size={15}/>{item}</li>)}</ul>
-                  <a href={wa(\`Bonjour i-DIGIT, je souhaite étudier un projet dans le domaine : \${solution.title}. Voici mon besoin : \`)} target="_blank" rel="noreferrer" className="text-link">Étudier ce besoin <Icon name="arrow" size={16}/></a>
+                  <a href={wa('Bonjour i-DIGIT, je souhaite étudier un projet dans le domaine : ' + solution.title + '. Voici mon besoin : ')} target="_blank" rel="noreferrer" className="text-link">Étudier ce besoin <Icon name="arrow" size={16}/></a>
                 </div>
               </article>
             ))}
