@@ -6,8 +6,8 @@ export function Footer() {
     <footer className="site-footer">
       <div className="container footer-grid">
         <div className="footer-brand">
-          <img src="/brand/idigit-logo-horizontal-dark.svg" alt="i-DIGIT — Solutions numériques" />
-          <p>Des solutions numériques fiables et adaptées aux réalités de votre activité.</p>
+          <img src="/brand/idigit-logo-horizontal-dark.svg" alt="i-DIGIT — Intégration de solutions technologiques" />
+          <p>Énergie, sécurité, réseaux et systèmes connectés : des solutions adaptées à vos espaces et à vos activités.</p>
         </div>
         <div className="footer-contact">
           <h3>Contact</h3>
@@ -17,7 +17,8 @@ export function Footer() {
         </div>
         <div className="footer-links">
           <h3>Explorer</h3>
-          <Link href="/#services">Nos services</Link>
+          <Link href="/#solutions">Nos solutions</Link>
+          <Link href="/#methode">Notre méthode</Link>
           <Link href="/carte/">Carte professionnelle</Link>
           <Link href="/confidentialite/">Confidentialité</Link>
         </div>
