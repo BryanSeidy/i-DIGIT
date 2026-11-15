@@ -19,14 +19,14 @@ export function LeadForm() {
     }
     const message = [
       'Bonjour i-DIGIT, je souhaite être recontacté(e).',
-      \`Nom : \${name.trim()}\`,
-      business.trim() ? \`Structure : \${business.trim()}\` : '',
-      \`Téléphone : \${phone.trim()}\`,
-      need.trim() ? \`Besoin : \${need.trim()}\` : '',
-      \`Contact préféré : \${contact}\`,
+      'Nom : ' + name.trim(),
+      business.trim() ? 'Structure : ' + business.trim() : '',
+      'Téléphone : ' + phone.trim(),
+      need.trim() ? 'Besoin : ' + need.trim() : '',
+      'Contact préféré : ' + contact,
       'J’accepte que ces informations soient utilisées pour donner suite à ma demande de contact.'
     ].filter(Boolean).join('\n')
-    window.location.href = \`https://wa.me/237659754675?text=\${encodeURIComponent(message)}\`
+    window.location.href = 'https://wa.me/237659754675?text=' + encodeURIComponent(message)
   }
 
   return (
