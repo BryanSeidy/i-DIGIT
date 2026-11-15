@@ -29,7 +29,7 @@ export function Header() {
         <a className="button button-primary nav-cta" href={whatsapp} target="_blank" rel="noreferrer">Parler de mon projet <span aria-hidden="true">↗</span></a>
         <div className="mobile-nav">
           <button
-            className={\`mobile-menu-toggle\${menuOpen ? ' is-open' : ''}\`}
+            className={'mobile-menu-toggle' + (menuOpen ? ' is-open' : '')}
             type="button"
             aria-label={menuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
             aria-expanded={menuOpen}
