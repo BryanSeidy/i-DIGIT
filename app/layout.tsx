@@ -3,16 +3,21 @@ import './globals.css'
 import { Header } from '../components/header'
 import { Footer } from '../components/footer'
 
+const siteUrl = 'https://idigit.pages.dev'
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://idigit.tech'),
-  title: { default: 'i-DIGIT | Solutions numériques à Douala', template: '%s | i-DIGIT' },
-  description: 'i-DIGIT accompagne les entreprises et les professionnels de Douala : maintenance informatique, réseaux, vidéosurveillance, domotique, digitalisation, développement logiciel et intelligence artificielle.',
+  metadataBase: new URL(siteUrl),
+  title: { default: 'i-DIGIT | Intégrateur de solutions technologiques au Cameroun', template: '%s | i-DIGIT' },
+  description: 'i-DIGIT accompagne les particuliers et les entreprises au Cameroun dans leurs projets d’énergie solaire et de secours électrique, de sécurité électronique, de contrôle d’accès, de réseaux et de systèmes connectés.',
   applicationName: 'i-DIGIT',
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'i-DIGIT — Le numérique au service de votre performance',
-    description: 'Maintenance informatique, réseaux, sécurité, domotique, digitalisation et intelligence artificielle à Douala.',
-    url: 'https://idigit.tech', siteName: 'i-DIGIT', locale: 'fr_CM', type: 'website',
+    title: 'i-DIGIT — Intégrateur de solutions technologiques',
+    description: 'Énergie et continuité électrique, sécurité électronique, contrôle d’accès, réseaux et systèmes connectés au Cameroun.',
+    url: siteUrl,
+    siteName: 'i-DIGIT',
+    locale: 'fr_CM',
+    type: 'website',
   },
   icons: { icon: '/brand/idigit-symbol.svg' },
   manifest: '/site.webmanifest',
